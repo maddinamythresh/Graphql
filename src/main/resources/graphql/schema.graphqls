@@ -1,0 +1,31 @@
+type Query{
+
+  employees: [Employee]
+  departments: [Department]
+}
+
+type Employee{
+  id: ID
+  name: String
+  email: String
+  role: String
+  salary:Float
+}
+
+input UpdateEmployee{
+  id:ID
+  name: String
+  email: String
+  role: String
+  salary:Float
+
+}
+type Mutation{
+  updateEmployee(input: UpdateEmployee): Employee
+}
+
+type Department{
+  department_id: Int
+  department_name: String
+}
+

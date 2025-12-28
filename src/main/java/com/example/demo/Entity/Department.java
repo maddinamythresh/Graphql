@@ -10,6 +10,8 @@ import java.util.List;
 public class Department {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+
   private int department_id;
 
   private String department_name;

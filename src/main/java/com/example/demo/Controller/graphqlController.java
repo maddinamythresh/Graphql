@@ -25,7 +25,14 @@ public class graphqlController {
     return graphsevice.employees();
   }
 
+  @MutationMapping
 
+  public Employee addEmployee(@Argument("input") UpdateEmployee emp){
+
+    return  graphsevice.addEmployee(emp);
+  }
+
+  // updateEmployee
   @MutationMapping
   public Employee updateEmployee(@Argument("input") UpdateEmployee emp){
 

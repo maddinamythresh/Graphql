@@ -10,6 +10,7 @@ type Employee{
   email: String
   role: String
   salary:Float
+
 }
 
 input UpdateEmployee{
@@ -18,10 +19,13 @@ input UpdateEmployee{
   email: String
   role: String
   salary:Float
-
+  department_id: Int
 }
+
+
 type Mutation{
   updateEmployee(input: UpdateEmployee): Employee
+  addEmployee(input: UpdateEmployee): Employee
 }
 
 type Department{

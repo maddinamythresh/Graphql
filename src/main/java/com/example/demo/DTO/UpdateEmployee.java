@@ -5,6 +5,7 @@ public record  UpdateEmployee(Long id,
                               String name,
                               String email,
                               String role,
-                              Double salary) {
+                              Double salary,
+                              Integer department_id) {
 
 }

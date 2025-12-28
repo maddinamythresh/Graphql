@@ -40,4 +40,22 @@ public class graphqlService {
 
     return repository.findById(employee.id()).orElse(null);
   }
+
+
+  public Employee addEmployee(UpdateEmployee employee){
+    Employee emp= repository.findById(employee.id()).orElse(new Employee());
+    emp.setRole(employee.role());
+    emp.setSalary(employee.salary());
+    emp.setEmail(employee.email());
+    emp.setId(employee.id());
+    emp.setName(employee.name());
+
+    System.out.println(emp.getId());
+
+    repository.save(emp);
+
+    return  repository.findById(employee.id()).orElse(null);
+
+  }
+
 }
